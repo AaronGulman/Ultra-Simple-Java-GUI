@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 
@@ -32,7 +33,18 @@ public class GUI{
 			}
 		});
 
+		panel.add(button);
+		panel.add(clickLabel);
+
+		frame.add(panel,BorderLayout.CENTER);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("GUI");
+		frame.pack();
+		frame.setVisible(true);
 		
+		
+
+
 		
 	}
 	
