@@ -1,7 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
-
+import java.awt.event.ActionEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -36,16 +37,21 @@ public class GUI{
 		panel.add(button);
 		panel.add(clickLabel);
 
-		frame.add(panel,BorderLayout.CENTER);
+		frame.add(panel, BorderLayout.CENTER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("GUI");
 		frame.pack();
 		frame.setVisible(true);
+	}
 		
-		
+		private void updateClickLabel(){
+			clickLabel.setText("Click Count: " + clickCount);
+		}
+
+		public static void main(String[] args){
+			new GUI();
+		}
 
 
 		
 	}
-	
-}
